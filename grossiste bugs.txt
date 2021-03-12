@@ -1,0 +1,17 @@
+
+
+
+- Traduction fichiers cache
+- Close button style
+
+- Product repetation probleme
+- Afficher declinaison
+- Client joined us repetation probleme
+
+
+- limiter les les promos a une seul 
+- Mode light par defaut
+- Se souviens du mode 
+
+- Afficher le coeur que dans les pages details
+- Porduit du jour 

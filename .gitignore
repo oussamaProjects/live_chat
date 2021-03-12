@@ -1,0 +1,10 @@
+node_modules/*
+vendor/*
+logs/sockets.log
+socket/oe_socket.js
+socket/socketjs.js
+actions.log
+package-lock.json
+cache/results.json
+views/scss/front.css
+views/scss/front.css.map

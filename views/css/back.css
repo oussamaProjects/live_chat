@@ -1,0 +1,281 @@
+/**
+*
+* L'nk Live Promo Module
+*
+* @author    Abdelakbir el Ghazouani - By L'nkboot.fr
+* @copyright 2016-2020 Abdelakbir el Ghazouani - By L'nkboot.fr (http://www.lnkboot.fr)
+* @license   Commercial license see license.txt
+* @category  Module
+* Support by mail  : contact@lnkboot.fr
+*
+*/
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap");
+
+@keyframes a {
+  0% {
+    border-color: silver;
+  }
+  to {
+    border-color: #f14646;
+  }
+}
+.magic-checkbox,
+.magic-radio {
+  position: absolute;
+  display: none;
+}
+.magic-checkbox[disabled],
+.magic-radio[disabled] {
+  cursor: not-allowed;
+}
+.magic-checkbox + label,
+.magic-radio + label {
+  position: relative;
+  display: block;
+  padding-left: 30px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.magic-checkbox + label:hover:before,
+.magic-radio + label:hover:before {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+  animation-name: a;
+}
+.magic-checkbox + label:before,
+.magic-radio + label:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  content: "";
+  border: 1px solid silver;
+}
+.magic-checkbox + label:after,
+.magic-radio + label:after {
+  position: absolute;
+  display: none;
+  content: "";
+}
+.magic-checkbox[disabled] + label,
+.magic-radio[disabled] + label {
+  cursor: not-allowed;
+  color: #e4e4e4;
+}
+.magic-checkbox[disabled] + label:after,
+.magic-checkbox[disabled] + label:before,
+.magic-checkbox[disabled] + label:hover,
+.magic-radio[disabled] + label:after,
+.magic-radio[disabled] + label:before,
+.magic-radio[disabled] + label:hover {
+  cursor: not-allowed;
+}
+.magic-checkbox[disabled] + label:hover:before,
+.magic-radio[disabled] + label:hover:before {
+  border: 1px solid #e4e4e4;
+  animation-name: none;
+}
+.magic-checkbox[disabled] + label:before,
+.magic-radio[disabled] + label:before {
+  border-color: #e4e4e4;
+}
+.magic-checkbox:checked + label:before,
+.magic-radio:checked + label:before {
+  animation-name: none;
+}
+.magic-checkbox:checked + label:after,
+.magic-radio:checked + label:after {
+  display: block;
+}
+.magic-radio + label:before {
+  border-radius: 50%;
+}
+.magic-radio + label:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f14646;
+}
+.magic-radio:checked + label:before {
+  border: 1px solid #f14646;
+}
+.magic-radio:checked[disabled] + label:before {
+  border: 1px solid #c9e2f9;
+}
+.magic-radio:checked[disabled] + label:after {
+  background: #c9e2f9;
+}
+.magic-checkbox + label:before {
+  border-radius: 3px;
+}
+.magic-checkbox + label:after {
+  top: 2px;
+  left: 7px;
+  box-sizing: border-box;
+  width: 6px;
+  height: 12px;
+  transform: rotate(45deg);
+  border: 2px solid #fff;
+  border-top: 0;
+  border-left: 0;
+}
+.magic-checkbox:checked + label:before {
+  border: #f14646;
+  background: #f14646;
+}
+.magic-checkbox:checked[disabled] + label:before {
+  border: #c9e2f9;
+  background: #c9e2f9;
+}
+
+body {
+  background-color: #f5f6f7 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#livepromo a {
+  color: #e86a5a;
+}
+#livepromo #scheduled_product_form > .panel,
+#livepromo #configuration_form > .panel,
+#livepromo #cart_rule_form > .panel {
+  padding: 0 0 20px 0 !important;
+  border-left: 1px solid #dbe6e9 !important;
+  margin-bottom: 20px !important;
+  border-right: 1px solid #dbe6e9 !important;
+}
+
+#livepromo .header {
+  background: #fff;
+  font-family: "Sen", sans-serif;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 8px 15px 0;
+  margin-bottom: 40px;
+}
+.logo {
+  width: 80px;
+  display: inline-block;
+  margin-top: -14px;
+}
+
+#livepromo .header h2 {
+  color: #000;
+  font-family: "Sen", sans-serif;
+  display: inline-block;
+  margin-left: 20px;
+}
+#livepromo .header h2 b {
+  color: #e86a5a;
+  font-family: "Sen", sans-serif;
+  font-weight: 900;
+}
+#livepromo .header .header-nav {
+  float: right;
+}
+#livepromo .header .header-nav ul {
+  margin-bottom: 0px;
+}
+#livepromo .header .header-nav ul li {
+  display: inline-block;
+}
+#livepromo .header .header-nav ul li a {
+  color: #000;
+  font-family: "Sen", sans-serif;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  display: block;
+  padding: 15px;
+}
+#livepromo .header .header-nav ul li a:hover {
+  background: #e86a5a;
+  color: #fff;
+  text-decoration: none;
+}
+#livepromo .header .header-nav ul li.current a {
+  background: #e86a5a;
+  color: #fff;
+}
+
+#livepromo .lp-panel .tab-content.panel {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 0px !important;
+  border: 0px;
+  margin-top: -1px;
+}
+#livepromo .lp-panel .nav-tabs li.active {
+  border: 0px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: -2px;
+}
+#livepromo .lp-panel .nav-tabs li a {
+  font-family: "Sen", sans-serif;
+}
+#livepromo .lp-panel .nav-tabs li.active a {
+  border: 0px;
+  font-weight: 700;
+}
+#livepromo .lp-panel .nav-tabs > li > a:hover {
+  border-color: transparent;
+}
+
+.lp-panel-footer {
+  background-color: #f5f6f7;
+}
+
+#livepromo .panel .panel-footer {
+  height: 85px;
+  background-color: transparent;
+  padding: 15px;
+  border-color: #dbe6e9;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#scheduled_product_form > .panel .tab-content.panel,
+#configuration_form > .panel .tab-content.panel,
+#cart_rule_form > .panel .tab-content.panel {
+  border: none !important;
+  box-shadow: none !important;
+  padding-bottom: 10px !important;
+  margin-bottom: 10px !important;
+  border-top: 1px solid #dbe6e9 !important;
+}
+
+.bootstrap .nav-tabs li a {
+  font-family: Open sans, sans-serif;
+  font-weight: normal;
+  height: 56px;
+  line-height: 36px;
+  border-top: none !important;
+  color: #999;
+}
+.bootstrap .nav-tabs li a {
+  border-right: 1px solid #dbe6e9 !important;
+  border-radius: 0;
+  margin-right: 0;
+  border-left: none !important;
+}
+#livepromo .nav.nav-tabs li.active a {
+  position: relative;
+  color: #e86a5a;
+}
+ul.nav.nav-tabs li.active a:after {
+  content: "";
+  height: 2px;
+  background: #e86a5a;
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: -1px;
+  margin: 0 !important;
+}
+
+.d-none {
+  display: none !important;
+}

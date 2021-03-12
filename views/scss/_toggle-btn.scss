@@ -1,0 +1,84 @@
+/* First toggle btn completed */
+
+.toggle-btn {
+  position: relative;
+  width: 30px;
+  height: 20px;
+  margin: 0 0 0 auto;
+  border-radius: 40px;
+}
+
+/* First toggle btn */
+
+#_1st-toggle-btn {
+  span {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    overflow: hidden;
+    opacity: 1;
+    background-color: #fff;
+    box-shadow: 0px 1px 6px $gray;
+    border-radius: 40px;
+    transition: 0.2s ease background-color, 0.2s ease opacity;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      transition: 0.5s ease transform, 0.2s ease background-color;
+    }
+
+    &:before {
+      background-color: #fff;
+      transform: translate(-20px, 0px);
+      z-index: 1;
+    }
+
+    &:after {
+      background-color: #000;
+      background: linear-gradient(var(--gradient_from), var(--gradient_to));
+      transform: translate(2px, 0px);
+      z-index: 0;
+    }
+  }
+
+  input[type="checkbox"] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+
+    &:checked + span {
+      background-color: #000;
+    }
+
+    &:active + span {
+      opacity: 0.5;
+    }
+
+    &:checked + span:before {
+      background-color: #000;
+      transform: translate(6px, -5px);
+    }
+
+    &:checked + span:after {
+      background-color: #fff;
+      background: linear-gradient(#fff, #fff);
+      transform: translate(12px, 0px);
+    }
+  }
+}

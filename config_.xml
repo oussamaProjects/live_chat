@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>lnk_livepromo</name>
+	<displayName><![CDATA[L\&#039;nk Live Promo]]></displayName>
+	<version><![CDATA[1.0.0]]></version>
+	<description><![CDATA[Live Promo in you front]]></description>
+	<author><![CDATA[L&#039;nkboot]]></author>
+	<tab><![CDATA[others]]></tab>
+	<confirmUninstall><![CDATA[Are you sure you want uninstall L\'nk Live Promo]]></confirmUninstall>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

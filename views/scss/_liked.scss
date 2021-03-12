@@ -1,0 +1,44 @@
+
+
+.lp-block-product{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    box-shadow: 0px 0px 20px rgba(92,111,139,0.12);
+    border-radius: 9px;
+    margin-bottom: 30px;
+    img{
+        width: 100%;
+        border-radius: 9px 9px 0 0;
+        padding: 0rem;
+    }
+    .lp-content-block{
+        padding: 8px 10px;
+        h3{ 
+            font-size: 1.4rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-top: 0;
+            text-transform: initial;
+        }
+        .lp-price{
+            text-align: center;
+            display: block;
+            font-size: 1.5rem;
+            color: $pink;
+            em{
+                text-decoration: line-through;
+                font-size: 1.1rem;
+                color: $black;
+            }
+        }
+    }
+}
+

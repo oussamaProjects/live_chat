@@ -1,0 +1,124 @@
+// Light mode
+
+$white:      #fefefe; 
+$light_gray: #f7f7f7;
+$gray:       #c7c7c7;
+$dark_gray:  #1b1b1b;
+$black:      #111111;
+
+$pink:  #ff4a50;
+$red:   #e84667;
+$green: #70af85;
+$blue:  #a7c5eb;
+
+$bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+$main_text_color: $black;
+$link_color: $black;
+$link_hover_color: $black;
+
+$bg_color: $white;
+$border_color: $gray;
+$comment_bg: $light_gray;
+$promo_bg: $light_gray;
+
+$lp_side_bottom: 64px;
+$lp_side_scroll_width: 4px;
+$lp_side_chat_bottom: 90px;
+
+// Dark mode
+$dark_main_text_color: $white;
+$dark_link_color: $white;
+$dark_link_hover_color: $light_gray;
+$dark_bg_color: $dark_gray;
+$dark_border_color: $dark_gray;
+$dark_bg: $black;
+$dark_promo_bg: $dark_gray;
+$dark_comment_bg: $dark_gray;
+
+$calabrate_icon: "./../img/svg/confetti.svg";
+$calabrate_icon: "./../img/svg/confetti_light.svg";
+$heart_icon: "./../img/svg/heart-icon.svg";
+$gift_box: "./../img/svg/gift-box.svg";
+
+
+$font-family-base: "Sen", sans-serif;
+
+$font-size-root:              null !default;
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .875 !default;
+$font-size-lg:                $font-size-base * 1.25 !default;
+
+$border-radius:               .25rem !default;
+$border-radius-sm:            .2rem !default;
+$border-radius-lg:            .3rem !default;
+$border-radius-pill:          50rem !default;
+
+$spacer: 1rem !default;
+
+$tooltip-font-size:                 $font-size-sm !default;
+$tooltip-max-width:                 200px !default;
+$tooltip-color:                     $white !default;
+$tooltip-bg:                        $black !default;
+$tooltip-border-radius:             $border-radius !default;
+$tooltip-opacity:                   .9 !default;
+$tooltip-padding-y:                 $spacer / 4 !default;
+$tooltip-padding-x:                 $spacer / 2 !default;
+$tooltip-margin:                    0 !default;
+
+$tooltip-arrow-width:               .8rem !default;
+$tooltip-arrow-height:              .4rem !default;
+$tooltip-arrow-color:               $tooltip-bg !default;
+
+// scss-docs-start zindex-stack
+$zindex-dropdown:                   1000 !default;
+$zindex-sticky:                     1020 !default;
+$zindex-fixed:                      1030 !default;
+$zindex-modal-backdrop:             1040 !default;
+$zindex-modal:                      1050 !default;
+$zindex-popover:                    1060 !default;
+$zindex-tooltip:                    1070 !default;
+
+:root {
+
+  --white:      #{$white}; 
+  --light_gray: #{$light_gray};
+  --gray:       #{$gray};
+  --dark_gray:  #{$dark_gray};
+  --black:      #{$black};
+
+  --red:    #{$red};
+  --pink:   #{$pink};
+  --green:  #{$green};
+  --blue:   #{$blue};
+
+  --link-color-hsl: hsl(var(--hue), var(--saturation), var(--light));
+  --gradient_from:  hsl(var(--hue), var(--saturation), var(--light));
+  --gradient_to:    hsl(var(--hue), var(--saturation), calc(var(--light) - 4%));
+  --dark_color:     hsl(var(--hue), var(--saturation), calc(var(--light) - 10%));
+
+}
+
+body {
+  --main_text_color: #{$main_text_color};
+  --link_color: #{$link_color};
+  --link_hover_color: #{$link_hover_color};
+  --bg_color: #{$bg_color};
+  --border_color: #{$border_color};
+  --comment_bg: #{$comment_bg};
+  --bg: #000000;
+  --promo_bg: #{$promo_bg};
+ 
+}
+
+body.dark-mode {
+  --main_text_color: #{$dark_main_text_color};
+  --link_color: #{$dark_link_color};
+  --link_hover_color: #{$dark_link_hover_color};
+  --bg_color: #{$dark_bg_color};
+  --border_color: #{$dark_border_color};
+  --comment_bg: #{$dark_comment_bg};
+  --bg: #{$dark_comment_bg};
+  --promo_bg: #{$dark_promo_bg};
+}
+
